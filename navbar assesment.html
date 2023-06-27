@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* nav bar start */
+
+        /* logo start */
+        /* #logo {
+            font-family: sans-serif;
+            font-size: 20px;
+            color: white;
+            line-height: 50px;
+            margin-left: 50px;
+        } */
+
+        /* logo ends */
+
+        /* menu items start */
+        .menu {
+            width: 100%;
+            margin: auto;
+            background-color: #1b4cd3;
+            color: white;
+            padding: 20px 0px;
+            display: flex;
+        }
+
+        #Home {
+            margin-left: 850px;
+        }
+
+        .menuitems {
+            /* float: right; */
+            padding: 15px 25px;
+            /* border: 2px solid green; */
+            position: relative;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            margin-top: 0px;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        /* menu items ends */
+        /* submenu starts */
+        .submenu {
+            width: 150px;
+            position: absolute;
+            left: 0;
+            display: none;
+            background-color: green;
+            top: 100%;
+            transition: ease-out;
+            transition-delay: 0.3s;
+        }
+
+        .submenuitems {
+            padding: 10px;
+            background-color: #1b4cd3;
+        }
+
+        .menuitems:hover {
+            background-color: #133593;
+            color: white;
+        }
+
+        .menuitems:hover .submenu {
+            display: block;
+        }
+
+        .submenuitems:hover {
+            background-color: #133593;
+            color: white;
+        }
+
+        /* submenu ends */
+
+        /* submenu1 starts */
+        .submenu1 {
+            width: 145px;
+            position: relative;
+            left: 100%;
+            top: 130px;
+            color: white;
+            display: none;
+            padding: 10px;
+            position: absolute;
+            background-color: #1b4cd3;
+            transition-delay: 0.3s;
+        }
+
+        .submenu1items {
+            padding: 10px;
+            background-color: #1b4cd3;
+            font-size: 19px;
+        }
+
+        .submenu1items:hover {
+            background-color: #133593;
+            color: white;
+        }
+
+        #side:hover .submenu1 {
+            display: block;
+        }
+
+        /* submenu1 ends */
+
+        /* login button start */
+
+        #btn {
+            height: 30px;
+            width: 80px;
+            margin-top: 12px;
+            margin-left: 25px;
+            /* border-radius: 5px; */
+        }
+
+        /* login button ends */
+
+        /* nav bar end */
+    </style>
+</head>
+
+<body>
+
+    <!-- nav bar start -->
+    <div class="menu">
+
+        <!-- logo start -->
+        <div id="logo">
+            
+        </div>
+        <!-- logo end     -->
+
+        <!-- menu items start -->
+        <div class="menuitems">logo</div>
+        <div class="menuitems" id="Home">Home</div>
+        <div class="menuitems">About</div>
+        <div class="menuitems">Service &nbsp;<i class="fa-solid fa-chevron-down"></i>
+
+            <!-- submenu start -->
+
+            <div class="submenu">
+                <div class="submenuitems">Web Design</div>
+                <div class="submenuitems">Marketing</div>
+                <div class="submenuitems">Word Press</div>
+                <div class="submenuitems" id="side">More &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-angle-right"></i>
+
+
+                    <!-- submenu 1 start -->
+
+                    <div class="submenu1">
+                        <div class="submenu1items">HTML</div>
+                        <div class="submenu1items">CSS</div>
+                        <div class="submenu1items">Java Script</div>
+                        <div class="submenu1items">Jquery</div>
+                    </div>
+                    <!-- submenu 1 end -->
+                </div>
+                <!-- submenu end -->
+            </div>
+        </div>
+        <div class="menuitems">Blogs</div>
+        <div class="menuitems">Contact</div>
+        <!-- menuitems end -->
+        <div class="clear"></div>
+
+        <!-- login button start -->
+
+        <input id="btn" type="button" value="Login">
+        <!-- login button end -->
+
+    </div>
+    <!-- nav bar end -->
+
+</body>
+
+</html>
